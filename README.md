@@ -1,27 +1,27 @@
 # personal-exspen-income
--->create venv
+-->create venv <br />   
 python3 -m venv env
---> activate venv
+--> activate venv<br />  
 . env/bin/activate
---> install django
+--> install django<br />  
 pip3 install Django
---> create app 
+--> create app <br />  
 django-admin startproject exspens .
--->run project
+-->run project<br />  
 python manage.py runserver
---> migrate project
+--> migrate project<br />  
 python manage.py migrate
 
 python manage.py runserver | python manage.py runserver port
 
 
---> create superuser
+--> create superuser<br />  
 python manage.py createsuperuser
 
---> create templet home
+--> create templet home<br />  
 python manage.py startapp home
 
--->migrate someting updates
+-->migrate something updates<br />  
 python manage.py makemigrations
 python manage.py migrate
 
