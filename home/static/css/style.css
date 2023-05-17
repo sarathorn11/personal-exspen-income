@@ -1,0 +1,108 @@
+
+body{
+    width: 320px;
+    margin:1rem auto;
+    font-family: 'K2D', sans-serif;
+   
+}
+.header{
+    text-align: center; 
+    margin-bottom: 1.5rem;
+}
+#balance{
+    margin-top: -1rem;
+}
+.inc-exp-container {
+    display: flex;
+    background: #f6f6f6e0;
+    justify-content: space-between;
+    padding: 1rem;
+
+}
+.inc-exp-container div{
+    width: 50%;
+    /* margin-top: -13px;
+    padding: 8px; */
+  
+}
+.hr{
+    font-size: 3px;
+    height: 8vh;
+}
+.inc-exp-container .right{
+    margin-left: 3px;
+    
+}
+.inc-exp-container .left p,.inc-exp-container .right p{
+    font-size: 1rem;
+    margin-top: -1px;
+    color: #7a7a7a;
+}
+.money{
+   margin:-0.6rem 0;
+   font-size: 1.4rem;
+}
+.plus{
+    color: #15d000;
+}
+.minus{
+    color: #f20606;
+}
+.history , .transaction{
+    border-bottom:1.5px solid rgb(207, 207, 207) ;
+}
+.list{
+    width: 98.5%;
+    list-style: none;
+    height: 110px;
+    overflow: auto;
+    
+}
+.lists{
+    margin-left: -2.5rem;
+    width: 100%;
+    background: #f1f1f1;
+    padding: 5px;
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+.list-plus{
+    border-right: 2px solid rgb(18, 207, 1) ;
+}
+.list-minus{
+    border-right: 2px solid red ;
+}
+.price span{
+    margin-right: 8px;
+}
+.price button{
+    font-weight: bold;
+    border: none;
+}
+.price button:hover{
+    background: #f70505;
+    border: none;
+    
+}
+.form-control input{
+    width: 96%;
+    padding: 8px;
+    margin-bottom: 5px;
+}
+.btn{
+    width: 103%;
+    border: none;
+    background: #6bbffc;
+    padding: 10px;
+    margin-top: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+#form{
+    margin-top: -0.5rem;
+}
+.transaction{
+    margin-top: -0.5rem;
+
+}

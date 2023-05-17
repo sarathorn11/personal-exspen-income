@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+
+{% block start %}
+<h2 class="header">Expense Tracker</h2>
+
+    <div class="container">
+        <h4>Your Balance</h4>
+        <h1 id="balance">${{profile.balance}}</h1>
+
+        <div class="inc-exp-container">
+            <div class="left">
+                <P>INCOME</P>
+                <div id="money-plus" class="money plus">+${{profile.income}}</div>
+            </div>
+            <hr class="hr">
+            <div class="right">
+                <P>EXPENSE</P>
+                <div id="money-minus" class="money minus">-${{profile.expenses}}</div>
+            </div>
+        </div>
+
+        <h3 class="history">History</h3>
+        <ul id="list" class="list">
+            <li class="lists list-minus">
+                <div class="name">Cash </div>
+                <div class="price">
+                    <span>-$400</span><button>x</button>
+                </div>
+
+            </li>
+            <li class="lists list-plus">
+                <div class="name">Cash </div>
+                <div class="price">
+                    <span>+$400</span><button>x</button>
+                </div>
+    
+            </li>
+            <li class="lists list-minus">
+                <div class="name">Cash </div>
+                <div class="price">
+                    <span>-$400</span><button>x</button>
+                </div>
+
+            </li>
+            <li class="lists list-plus">
+                <div class="name">Cash </div>
+                <div class="price">
+                    <span>+$400</span><button>x</button>
+                </div>
+    
+            </li>
+            <li class="lists list-plus">
+                <div class="name">Cash </div>
+                <div class="price">
+                    <span>+$400</span><button>x</button>
+                </div>
+    
+            </li>
+
+        </ul>
+
+        <h3 class="transaction">Add new transaction</h3>
+        <form id="form" method="POST">
+            {% csrf_token %}
+            <div class="form-control">
+                <label for="text">Text</label><br>
+                <input type="text" required name="text" id="text" placeholder="Enter text...">
+            </div>
+            <div class="form-control">
+                <label for="amount">
+                    Amount <br />
+                </label>
+                <input type="number" required name="amount" id="amount" placeholder="Enter amount...">
+            </div>
+            <div>Type
+                <select name="expense_type" required id="status">
+                    <option value="">select...</option>
+                    <option value="Positive">Income</option>
+                    <option value="Negative">Expense</option>
+              </select>
+            </div>
+            <button class="btn" type="submit">
+                ADD TRANSACTION
+            </button>
+        </form>
+    </div>
+{% endblock %}
