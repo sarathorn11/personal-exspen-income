@@ -22,41 +22,28 @@
 
         <h3 class="history">History</h3>
         <ul id="list" class="list">
-            <li class="lists list-minus">
-                <div class="name">Cash </div>
+            {% for expense in expenses %}
+            {% if expense.expense_type == 'Positive'%}
+            <li class="lists list-plus">
+                <div class="name">{{ expense.name }} </div>
                 <div class="price">
-                    <span>-$400</span><button>x</button>
+                    <span>+${{expense.amount }}</span><button>x</button>
                 </div>
 
             </li>
-            <li class="lists list-plus">
-                <div class="name">Cash </div>
-                <div class="price">
-                    <span>+$400</span><button>x</button>
-                </div>
-    
-            </li>
+            {% else %}
             <li class="lists list-minus">
-                <div class="name">Cash </div>
+                <div class="name">{{ expense.name }} </div>
                 <div class="price">
-                    <span>-$400</span><button>x</button>
+                    <span>-${{expense.amount }}</span><button>x</button>
                 </div>
 
             </li>
-            <li class="lists list-plus">
-                <div class="name">Cash </div>
-                <div class="price">
-                    <span>+$400</span><button>x</button>
-                </div>
-    
-            </li>
-            <li class="lists list-plus">
-                <div class="name">Cash </div>
-                <div class="price">
-                    <span>+$400</span><button>x</button>
-                </div>
-    
-            </li>
+            {%endif%}
+         
+
+            {% endfor %}
+         
 
         </ul>
 
