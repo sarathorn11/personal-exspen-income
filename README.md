@@ -25,3 +25,4 @@ python manage.py startapp home<br />
 python manage.py makemigrations<br />  
 python manage.py migrate<br />  
 
+![alt](/home/surfacez1005/Desktop/personal-exspen-income/home/static/img/app.png)
